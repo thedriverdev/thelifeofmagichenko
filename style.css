@@ -1,0 +1,112 @@
+#playerName {
+  margin-top: 210px;
+  text-align: center;
+  }
+  #instruction{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  }
+  
+  .trigger {
+  text-align: center;
+  }
+  
+  #themeSwitch {
+  border: none;
+  font-family: Times New Roman;
+  }
+  body {
+   font-family: Times New Roman;
+   font-size: 12px;
+   font-weight: bold;
+   background-color: whitesmoke;
+   height: 250px;
+  }
+  .black {
+  background-color: black;
+  }
+  .green {
+  color: green;
+  }
+  
+  #trigger {
+  height: 60px;
+  width: 343px;
+  font-size: 20px;
+  color: lightblue;
+  background-color: grey;
+  border-radius: 10px;
+  border: none;
+  font-family: Times New Roman;
+  }
+  
+  #billBoard {
+  border: solid;
+  text-align: center;
+  height: 120px;
+  }
+  
+  .display {
+  color: hsl(20, 100%, 50%);
+  margin: 5px;
+  }
+  
+  #display1 {
+  margin-top: 10px;
+  }
+  
+  #display4 {
+  color: red;
+  font-style: italic;
+  margin: 5px;
+  font-size: 11px;
+  }
+  
+  .game {
+  margin-top: 0px;
+  }
+  .timer {
+  text-align: center;
+  }
+  #timer {
+  font-size: 11.5px;
+  font-weight: bold;
+  }
+  
+  .themeSwitch {
+  margin-top: 1px;
+  }
+  
+  .header {
+  text-align: center;
+  margin-top: 12px;
+  }
+  #title, #header {
+  text-decoration: underline;
+  }
+  #title {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  }
+  #header{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+  
+  .author {
+  text-align: center;
+  margin-top: 30px;
+  }
+  .author1 {
+  text-align: center;
+  margin-top: 230px;
+  }
+  
+  
+  #author, #author1 {
+  text-decoration: underline;
+  }
+  
+  #desg {
+  margin-left: 130px;
+  }
