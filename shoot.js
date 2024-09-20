@@ -29,7 +29,7 @@ if (currentHighScore >= (7/10 * worldHighScore) || currentHighScore > worldHighS
 
 
 // Receive World Highscore from server after page loads
-  fetch("https://localhost:7217/api/TLOMHighScores/TLOMhighestScore", {
+  fetch("http://localhost:5272/api/TLOMHighScores/TLOMhighestScore", {
     method: "GET",
     headers: {
         "Content-Type": "application/json"

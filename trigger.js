@@ -487,7 +487,7 @@ function enableTrigger() {
        .innerHTML =
        "Score uploaded!";
        //Send to server
-       fetch("https://localhost:7217/api/TLOMHighScores", {
+       fetch("http://localhost:5272/api/TLOMHighScores", {
         method: "POST",
         headers: {
          "Content-Type": "application/json"
@@ -523,7 +523,7 @@ function enableTrigger() {
        .innerHTML =
        "New world highscore uploaded!";
 
-       fetch("https://localhost:7217/api/TLOMHighScores", {
+       fetch("http://localhost:5272/api/TLOMHighScores", {
         method: "POST",
         headers: {
          "Content-Type": "application/json"
@@ -550,7 +550,7 @@ function enableTrigger() {
    }, 46000);
    setTimeout(() => {
         // Receive World Highscore from server after time ends
-  fetch("https://localhost:7217/api/TLOMHighScores/TLOMhighestScore", {
+  fetch("http://localhost:5272/api/TLOMHighScores/TLOMhighestScore", {
     method: "GET",
     headers: {
       "Content-Type": "application/json"
