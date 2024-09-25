@@ -334,15 +334,15 @@ function enableTrigger() {
     timer.innerHTML =
      "00:00 second...";
     trigger.disabled = true;
-
-    if (scoreCount < (7 / 10) *
+// World Highscore
+    if (scoreCount < (75 / 100) *
      worldHighScore && scoreCount >= (1 /
       2) *
       worldHighScore) {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Below 70%. Not good enough, Sergeant " +
+       ": Below 75%. Not good enough, Sergeant " +
        input.value +
        ". Do it again.";
      }, 1000);
@@ -355,7 +355,7 @@ function enableTrigger() {
       2) *
       worldHighScore && scoreCount >= (
       10 /
-      100) * highScore) {
+      100) * worldHighScore) {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
@@ -368,8 +368,8 @@ function enableTrigger() {
        input.value +
        ": Of course, " + player2;
      }, 2000);
-    } else if (scoreCount >= (7 /
-      10) *
+    } else if (scoreCount >= (75 /
+      100) *
       worldHighScore && scoreCount <= (9 /
       10) * worldHighScore) {
      theMan.style.fontSize = "12px";
@@ -389,7 +389,7 @@ function enableTrigger() {
     } else if (scoreCount > (9 /
       10) *
       worldHighScore && scoreCount <=
-      worldHighScore
+      (worldHighScore - 0.1)
     ) {
      setTimeout(() => {
       theMan.innerHTML =
@@ -404,12 +404,12 @@ function enableTrigger() {
        ".";
      }, 2000);
 
-    } else if (scoreCount >
+    } else if (scoreCount >=
       worldHighScore) {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": You are the new god of war! General " +
+       ": You are the new lord of war! General " +
        input.value + " 🫡";
      }, 1000);
      setTimeout(() => {
@@ -424,7 +424,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Too poor! You wasted those bullets, Corporal " +
+       ": Too poor! You wasted those bullets, Private " +
        input.value + ".";
      }, 1000);
      setTimeout(() => {
@@ -465,12 +465,20 @@ function enableTrigger() {
        "Will not upload.";
      }, 3000);
      setTimeout(() => {
-      highScoreDisplay
-       .innerHTML =
+      if (scoreCount >= highScore) {
+        highScoreDisplay.innerHTML =
+       "New Highscore: " +
+       input.value +
+       " - ₦" +
+       scoreCount; 
+      } else {
+        highScoreDisplay.innerHTML =
        "Highscore: " +
        currentHighScorer +
        " - ₦" +
        currentHighScore;
+      }
+      
      }, 5000);
 
     } else if (scoreCount >= (75 / 100 *
@@ -504,13 +512,22 @@ function enableTrigger() {
      }, 3000);
 
      setTimeout(() => {
-      highScoreDisplay
-       .innerHTML =
+      if (scoreCount >= highScore) {
+        highScoreDisplay.innerHTML =
+       "New Highscore: " +
+       input.value +
+       " - ₦" +
+       scoreCount; 
+      } else {
+        highScoreDisplay.innerHTML =
        "Highscore: " +
-       currentHighScorer + " - ₦" +
+       currentHighScorer +
+       " - ₦" +
        currentHighScore;
+      }
+      
      }, 5000);
-    } else if (scoreCount > worldHighScore){
+    } else if (scoreCount >= worldHighScore){
 
      setTimeout(() => {
       highScoreDisplay

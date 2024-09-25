@@ -192,7 +192,7 @@ trigger.addEventListener("click",
 
 function updateHighScore() {
 // Local Highscore
- if (scoreCount > highScore) {
+ if (scoreCount >= highScore) {
   highScoreDisplay.innerHTML =
    "New Highscore: " + input.value +
    " - ₦" +
