@@ -20,7 +20,7 @@ function enableTrigger() {
 
   input.value = "Magichenko";
   submit.innerText =
-   "Play as 'Magichenko'?";
+   "Play as Magichenko?";
 
  } else {
 
@@ -88,7 +88,6 @@ function enableTrigger() {
   }
   displayLetters4();
 
-
   function tellMessage() {
    if (letters5.length === 0)
     return;
@@ -98,6 +97,39 @@ function enableTrigger() {
    setTimeout(tellMessage, 20);
   }
   tellMessage();
+
+  // Receive World Highscore from server after page loads
+  fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
+    method: "GET",
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
+.then(response => response.json())
+.then(data => {
+    if (data) {
+        console.log(`Player: ${data.playerName}, Score: ${data.score}`);
+        
+
+        worldHighScore = `${data.score}`;
+        worldHighScorer = `${data.playerName}`;
+
+        setTimeout(()=>{
+            worldHighScoreDisplay.textContent = `Retrieving World Highscore...`;
+        }, 1000);
+        setTimeout(()=>{
+            worldHighScoreDisplay.textContent = `World Highscore retrieved!`;
+        }, 3000);
+        setTimeout(()=>{
+            worldHighScoreDisplay.textContent = `World Highscore: ${data.playerName} - ₦${data.score}`;
+        }, 5000);
+
+
+    } else {
+        console.log("No high score data found.");
+    }
+})
+.catch(error => console.error("Error fetching highest score:", error));
 
   expressions.innerText = input.value +
    ": Alrighty, boss!";
@@ -125,6 +157,8 @@ function enableTrigger() {
   function switchTheme() {
    parent.classList.toggle("black");
    parent.classList.toggle("green");
+   highScoreDisplay.classList.toggle("black");
+   highScoreDisplay.classList.toggle("green");
    themeSwitch.classList.toggle(
     "black");
    billBoard.classList.toggle(
@@ -444,6 +478,10 @@ function enableTrigger() {
     trigger.innerHTML = "Jammed!";
 
     parent.style.color = "grey";
+    highScoreDisplay.style.color = "grey";
+    highScoreDisplay.style.borderBottom = "1px dashed red";
+    //highScoreDisplay.style.borderWidth = "1px";
+    //highScoreDisplay.style.borderColor = "red";
    }, 45000);
 
    setTimeout(() => {
@@ -495,7 +533,7 @@ function enableTrigger() {
        .innerHTML =
        "Score uploaded!";
        //Send to server
-       fetch("http://localhost:5272/api/TLOMHighScores", {
+       fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
         method: "POST",
         headers: {
          "Content-Type": "application/json"
@@ -540,7 +578,7 @@ function enableTrigger() {
        .innerHTML =
        "New world highscore uploaded!";
 
-       fetch("http://localhost:5272/api/TLOMHighScores", {
+       fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
         method: "POST",
         headers: {
          "Content-Type": "application/json"
@@ -567,7 +605,7 @@ function enableTrigger() {
    }, 46000);
    setTimeout(() => {
         // Receive World Highscore from server after time ends
-  fetch("http://localhost:5272/api/TLOMHighScores/TLOMhighestScore", {
+  fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
     method: "GET",
     headers: {
       "Content-Type": "application/json"
@@ -600,24 +638,6 @@ function enableTrigger() {
 .catch(error => console.error("Error fetching highest score:", error));
 
    }, 55000);
-
-/*
-   setTimeout(() => {
-    if (worldHighScore > scoreCount) {
-     setTimeout(() => {
-      theMan.innerHTML =
-       player2 +
-       ": Oops! Your score has been beaten, " +
-       input.value + ".";
-     }, 1000);
-     setTimeout(() => {
-      expressions.innerHTML =
-       input.value +
-       ": I'm gonna try again, " + player2 + ".";
-     }, 3000);
-    }
-   }, 64000);
-*/
 
    trigger.removeEventListener(
     "click",

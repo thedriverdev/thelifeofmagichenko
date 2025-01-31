@@ -7,6 +7,19 @@
   margin-bottom: 2px;
   }
   
+  #hiSco {
+    border: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: Times New Roman;
+    font-size: 12px;
+  }
+  #hiSco:hover {
+    cursor: pointer;
+    color: red;
+  }
+
   .trigger {
   text-align: center;
   }
