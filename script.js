@@ -17,7 +17,7 @@ let parent = document.getElementById(
  let bulletCount = 0;
  let firingRate = 0;
  
-/* 
+
  const desktopMessage =
   "THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE";
  
@@ -34,7 +34,7 @@ let parent = document.getElementById(
   parent.style.fontSize = "30px";
   parent.style.fontWeight = "bold";
  }
-*/
+
  function shoot() {
   bulletCount++;
   bulletCountDisplay.innerHTML =
