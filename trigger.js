@@ -47,7 +47,7 @@ function enableTrigger() {
   displayLetters1();
 
   let paragraph2 =
-   "GET THE HIGHEST SCORE POSSIBLE WITHIN THE SET TIME!";
+   "SET THE HIGHEST SCORE POSSIBLE WITHIN THE SET TIME!";
 
   let letters2 = paragraph2.split('');
 
