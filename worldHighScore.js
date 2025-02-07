@@ -3,7 +3,7 @@ const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf");
 
 worldHighScoreHeading.innerHTML = "PAGE IS UNDER DEVELOPMENT";
-//const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
+const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 worldHighScoreHeading.style.textAlign = "center";
 worldHighScoreHeading.style.marginTop = "150px";
 worldHighScoreHeading.style.fontSize = "25px";
@@ -67,6 +67,6 @@ setTimeout(() => {
  setTimeout(() => {
   steppenwolf.innerHTML =
    `<img src="steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
-    <p>I'VE COME TO BATHE IN YOUR FEAR!</p>
+    <p>${input.value}, I'VE COME TO BATHE IN YOUR FEAR!</p>
    `;
  }, 11000);

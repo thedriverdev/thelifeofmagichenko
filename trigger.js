@@ -537,7 +537,8 @@ function enableTrigger() {
        fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
         method: "POST",
         headers: {
-         "Content-Type": "application/json"
+         "Content-Type": "application/json",
+         "X-API-KEY": xydfg
         },
         body: JSON.stringify({
          PlayerName: input.value,
@@ -582,7 +583,8 @@ function enableTrigger() {
        fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
         method: "POST",
         headers: {
-         "Content-Type": "application/json"
+         "Content-Type": "application/json",
+         "X-API-KEY": xydfg
         },
         body: JSON.stringify({
          PlayerName: input.value,
