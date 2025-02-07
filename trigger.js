@@ -114,13 +114,13 @@ function enableTrigger() {
         worldHighScorer = `${data.playerName}`;
 
         setTimeout(()=>{
-            worldHighScoreDisplay.textContent = `Retrieving World Highscore...`;
+            worldHighScoreDisplay.innerHTML = `Retrieving World Highscore...`;
         }, 1000);
         setTimeout(()=>{
-            worldHighScoreDisplay.textContent = `World Highscore retrieved!`;
+            worldHighScoreDisplay.innerHTML = `World Highscore retrieved!`;
         }, 3000);
         setTimeout(()=>{
-            worldHighScoreDisplay.textContent = `World Highscore: ${data.playerName} - ₦${data.score}`;
+            worldHighScoreDisplay.innerHTML = `World Highscore: ${data.playerName} - ₦${data.score}`;
         }, 5000);
 
 
