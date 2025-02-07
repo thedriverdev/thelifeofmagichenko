@@ -3,62 +3,65 @@
 <head>
  <title>THE LIFE OF OGO MAGICHENKO | The Arcade</title>
  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body id="parent">
-<h1 id="formobile"></h1>
-<div id="billBoard">
-<p id="display1" class="display"></p>
-<p id="display2" class="display"></p>
-<p id="display3" class="display"></p>
-<p id="display4"></p>
-</div>
-<div class="header">
-<p id="title"></p>
-<p id="header"></p>
-</div>
-<div id="playerName">
-<p id="instruction"></p>
-<input id="input" type="text" maxlength=50 placeholder="Enter a name or an alias."> <button id="submit">Submit</button>
-</div>
-<section id="game">
-<main id="expression"></main>
-<p id="wHiSco"></p>
-<button id="hiSco"></button>
-<p id="bulletPriceDisplay">Bullet price: </p>
-<p id="shooterNom">Shooter:</p>
-<p id="scoreCountDisplay">Score:</p>
+  <h1 id="formobile"></h1>
+  <div id="billBoard">
+    <p class="momentBillboard"></p>
+    <p id="display1" class="display"></p>
+    <p id="display2" class="display"></p>
+    <p id="display3" class="display"></p>
+    <p id="display4"></p>
+  </div>
+  <div class="header">
+    <p id="title"></p>
+    <p id="header"></p>
+  </div>
+  <div id="playerName">
+    <p id="instruction"></p>
+    <input id="input" type="text" maxlength=50 placeholder="Enter a name or an alias."> <button id="submit">Submit</button>
+  </div>
+  <section id="game">
+    <main id="expression"></main>
+    <button id="wHiSco"></button>
+    <button id="hiSco"></button>
+    <p id="bulletPriceDisplay">Bullet price: </p>
+    <p id="shooterNom">Shooter:</p>
+    <p id="scoreCountDisplay">Score:</p>
 
-<p id="bulletCountDisplay">Bullets count:</p>
-<p id="firing">Firing:</p>
-<p id="firingrate">Firing rate:</p>
-<p id="theMan">The Man: Try to increase your firing rate quickly.</p>
-<p id="magichenko"></p>
-</main>
-<div class="trigger">
-<button id="trigger" disabled>Trigger</button>
-<nav class="themeSwitch">
-<button id="themeSwitch">NVG: Off</button>
-</nav>
-</div>
-<div class="timer">
-<p id="timer"></p>
-</div>
-</section>
-<div class="author">
-<p id="author"></p>
-</div>
-<div class="author1">
-<p id="author1"></p>
-</div>
+    <p id="bulletCountDisplay">Bullets count:</p>
+    <p id="firing">Firing:</p>
+    <p id="firingrate">Firing rate:</p>
+    <p id="theMan">The Man: Try to increase your firing rate quickly.</p>
+    <p id="magichenko"></p>
+    </main>
+    <div class="trigger">
+    <button id="trigger" disabled>Trigger</button>
+    <nav class="themeSwitch">
+    <button id="themeSwitch">NVG: Off</button>
+    </nav>
+    </div>
+    <div class="timer">
+    <p id="timer"></p>
+    </div>
+  </section>
+  <div class="author">
+    <p id="author"></p>
+  </div>
+  <div class="author1">
+    <p id="author1"></p>
+  </div>
 
-<script src="author.js"></script>
-<script src="trigger.js"></script>
-<script src="highscore.js"></script>
-<script src="firing.js"></script>
-<script src="expression.js"></script>
-<script src="timer.js"></script>
- <script src="script.js"></script>
- <script src="shoot.js"></script>
+  <script src="author.js"></script>
+  <script src="trigger.js"></script>
+  <script src="highscore.js"></script>
+  <script src="firing.js"></script>
+  <script src="expression.js"></script>
+  <script src="timer.js"></script>
+  <script src="script.js"></script>
+  <script src="shoot.js"></script>
+    <script src="worldHighScore.js"></script>
 </body>
 </html>

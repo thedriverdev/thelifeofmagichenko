@@ -1,4 +1,3 @@
-
 let titleDisplay = document
  .getElementById(
   "title");

@@ -1,5 +1,4 @@
 //Submit name to play!
-
 let shooterNomDisplay = document
  .getElementById("shooterNom");
 
@@ -116,13 +115,13 @@ function enableTrigger() {
 
         setTimeout(()=>{
             worldHighScoreDisplay.textContent = `Retrieving World Highscore...`;
-        }, 1000);
+        }, 500);
         setTimeout(()=>{
             worldHighScoreDisplay.textContent = `World Highscore retrieved!`;
-        }, 3000);
+        }, 1500);
         setTimeout(()=>{
             worldHighScoreDisplay.textContent = `World Highscore: ${data.playerName} - ₦${data.score}`;
-        }, 5000);
+        }, 2500);
 
 
     } else {
@@ -159,6 +158,8 @@ function enableTrigger() {
    parent.classList.toggle("green");
    highScoreDisplay.classList.toggle("black");
    highScoreDisplay.classList.toggle("green");
+   worldHighScoreDisplay.classList.toggle("black");
+   worldHighScoreDisplay.classList.toggle("green");
    themeSwitch.classList.toggle(
     "black");
    billBoard.classList.toggle(

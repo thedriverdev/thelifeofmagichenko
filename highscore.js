@@ -1,6 +1,13 @@
 //localStorage.clear();
 let worldHighScoreDisplay = document
  .getElementById("wHiSco");
+ worldHighScoreDisplay.style.marginBottom = "7px";
+ worldHighScoreDisplay.style.fontWeight = "bold";
+
+ function goTowHiScoList() {
+   window.open('worldHighScores.html', '_blank');
+ }
+ worldHighScoreDisplay.onclick = goTowHiScoList;
 
 let worldHighScore = 0;
 let worldHighScorer;
