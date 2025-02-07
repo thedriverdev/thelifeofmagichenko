@@ -2,7 +2,6 @@ const worldHighScoreHeading = document.getElementById("wHiScoHeading");
 const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf");
-const enteredName = input.value;
 
 worldHighScoreHeading.innerHTML = "PAGE IS UNDER DEVELOPMENT";
 worldHighScoreHeading.style.textAlign = "center";
@@ -68,6 +67,6 @@ setTimeout(() => {
  setTimeout(() => {
   steppenwolf.innerHTML =
    `<img src="steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
-    <p>${enteredName}, I'VE COME TO BATHE IN YOUR FEAR!</p>
+    <p>I'VE COME TO BATHE IN YOUR FEAR!</p>
    `;
  }, 11000);
