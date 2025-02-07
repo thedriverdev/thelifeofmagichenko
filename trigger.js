@@ -115,13 +115,13 @@ function enableTrigger() {
 
         setTimeout(()=>{
             worldHighScoreDisplay.textContent = `Retrieving World Highscore...`;
-        }, 500);
+        }, 1000);
         setTimeout(()=>{
             worldHighScoreDisplay.textContent = `World Highscore retrieved!`;
-        }, 1500);
+        }, 3000);
         setTimeout(()=>{
             worldHighScoreDisplay.textContent = `World Highscore: ${data.playerName} - ₦${data.score}`;
-        }, 2500);
+        }, 5000);
 
 
     } else {
