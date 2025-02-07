@@ -29,13 +29,10 @@ let minute = date.getMinutes().toString().padStart(2,'0');
 hour = hour % 12;
 let period = hour <= 12 ? "AM" : "PM";
 
-function updateClock() {
-  momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute} ${period}`;
-  const desktopMessage =
-  `${day}-${month}-${year} | ${hour}:${minute} ${period} <br><br><br><br><br><br> THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE`;
-}
+momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute} ${period}`;
 
-setInterval(updateClock, 60000);
+ const desktopMessage =
+  `${day}-${month}-${year} | ${hour}:${minute} ${period} <br><br><br><br><br><br> THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE`;
  
  function isMobile() {
   return /Mobi|Android/i.test(navigator
