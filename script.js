@@ -26,13 +26,11 @@ let month = date.toLocaleString('default', {month:'short'});
 let year = date.getFullYear().toString().padStart(2,'0');
 let hour = date.getHours().toString().padStart(2,'0');
 let minute = date.getMinutes().toString().padStart(2,'0');
-hour = hour % 12;
-let period = hour <= 12 ? "AM" : "PM";
 
-momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute} ${period}`;
+momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute}`;
 
  const desktopMessage =
-  `${day}-${month}-${year} | ${hour}:${minute} ${period} <br><br><br><br><br><br> THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE`;
+  `${day}-${month}-${year} | ${hour}:${minute} <br><br><br><br><br><br> THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE`;
  
  function isMobile() {
   return /Mobi|Android/i.test(navigator
