@@ -15,6 +15,7 @@ function shooting() {
 
  if (firingRate <= 19) {
   firingRate++;
+  gunShot.play();
   firingRateDisplay.innerHTML =
    "Firing rate: " + firingRate;
   firing.innerHTML = "Firing:" + ("🔥"
@@ -25,6 +26,7 @@ function shooting() {
  } else if (firingRate >= 19 &&
   firingRate <= 21) {
   firingRate++;
+  lightMachineGun.play();
   firingRateDisplay.style.color =
    "orange";
   firingRateDisplay.innerHTML =

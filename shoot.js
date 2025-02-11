@@ -2,6 +2,7 @@ const gunLoad = document.querySelector(".gunload");
 const gunCock = document.querySelector(".guncocking");
 const gunShot = document.querySelector(".gunshot");
 const lightMachineGun = document.querySelector(".lightmachinegun");
+const gunJammed = document.querySelector(".empty-gun-shot");
 
 
 display1 = document.getElementById(

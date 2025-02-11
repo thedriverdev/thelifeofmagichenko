@@ -376,6 +376,7 @@ function enableTrigger() {
    setTimeout(() => {
     timer.innerHTML =
      "00:00 second...";
+     gunJammed.play();
     trigger.disabled = true;
 // World Highscore
     if (scoreCount < (75 / 100) *
