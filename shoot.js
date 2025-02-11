@@ -1,3 +1,8 @@
+const gunLoad = document.querySelector(".gunload");
+const gunCock = document.querySelector(".guncocking");
+const gunShot = document.querySelector(".gunshot");
+const lightMachineGun = document.querySelector(".lightmachinegun");
+
 
 display1 = document.getElementById(
   "display1");

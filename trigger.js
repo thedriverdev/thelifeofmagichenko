@@ -180,6 +180,14 @@ function enableTrigger() {
    "click",
    switchTheme);
 
+   // un load and cock sound
+   setTimeout(()=>{
+    gunLoad.play();
+   }, 0);
+   setTimeout(()=>{
+    gunCock.play();
+   }, 500);
+
   function countDownTimer() {
    setTimeout(() => {
     timer.innerHTML =

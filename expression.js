@@ -35,6 +35,7 @@ function express() {
   theMan.innerHTML =
    player2 +
    ": Fantastic! Maintain this rate.";
+   lightMachineGun.play();
  } else if (firingRate === 21) {
   theMan.innerHTML =
    player2 +
