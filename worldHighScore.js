@@ -2,10 +2,11 @@ const worldHighScoreHeading = document.getElementById("wHiScoHeading");
 const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf");
+const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
 
 worldHighScoreHeading.innerHTML = "PAGE IS UNDER DEVELOPMENT";
 worldHighScoreHeading.style.textAlign = "center";
-worldHighScoreHeading.style.marginTop = "150px";
+worldHighScoreHeading.style.marginTop = "120px";
 worldHighScoreHeading.style.fontSize = "25px";
 worldHighScoreHeading.style.fontWeight = "bold";
 
@@ -65,8 +66,9 @@ setTimeout(() => {
    "EXIT BEFORE STEPPENWOLF APPEARS<br>00:01 second...";
  }, 10000);
  setTimeout(() => {
+  steppenwolfVoice.play();
   steppenwolf.innerHTML =
    `<img src="steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
-    <p>I'VE COME TO BATHE IN YOUR FEAR!</p>
+    <p>I HAVE COME TO ENLIGHTEN YOU TO THE GREAT DARKNESS<br>I WILL BATHE IN YOUR FEAR</p>
    `;
  }, 11000);

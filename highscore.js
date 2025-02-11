@@ -228,22 +228,6 @@ function updateHighScore() {
   worldHighScoreDisplay.style
    .fontWeight = "bold";
 
-   // Send high score to server
-/*
-   fetch("https://localhost:7217/api/TLOMHighScores", {
-      method: "POST",
-      headers: {
-       "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-       PlayerName: input.value,
-       Score: scoreCount
-      })
-     })
-     .then(response => response.json())
-     .then(data => console.log(data.PlayerName))
-     .catch(error => console.error(error));
-*/
  }
 
 }

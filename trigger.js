@@ -13,6 +13,16 @@ let submit = document.getElementById(
 
 let red;
 
+setTimeout(()=>{
+  gunLoad.play();
+}, 1000);
+setTimeout(()=>{
+  gunCock.play();
+}, 1500);
+setTimeout(()=>{
+  pageLoadShots.play();
+}, 3000);
+
 function enableTrigger() {
 
  if (input.value.trim() === "") {
@@ -103,10 +113,10 @@ function enableTrigger() {
     headers: {
         "Content-Type": "application/json"
     }
-})
-.then(response => response.json())
-.then(data => {
-    if (data) {
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data) {
         console.log(`Player: ${data.playerName}, Score: ${data.score}`);
         
 
@@ -127,8 +137,8 @@ function enableTrigger() {
     } else {
         console.log("No high score data found.");
     }
-})
-.catch(error => console.error("Error fetching highest score:", error));
+  })
+  .catch(error => console.error("Error fetching highest score:", error));
 
   expressions.innerText = input.value +
    ": Alrighty, boss!";
@@ -175,12 +185,13 @@ function enableTrigger() {
    }
    themeSwitch.classList.toggle(
     "green");
+    nvgSwitch.play();
   }
   themeSwitch.addEventListener(
    "click",
    switchTheme);
 
-   // un load and cock sound
+   // Gun load and cock sound
    setTimeout(()=>{
     gunLoad.play();
    }, 0);
@@ -622,10 +633,10 @@ function enableTrigger() {
     headers: {
       "Content-Type": "application/json"
   }
-})
-.then(response => response.json())
-.then(data => {
-  if (data) {
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data) {
       console.log(`Player: ${data.playerName}, Score: ${data.score}`);
       
 
@@ -643,11 +654,11 @@ function enableTrigger() {
       }, 7000);
 
 
-  } else {
-      console.log("No high score data found.");
-  }
-})
-.catch(error => console.error("Error fetching highest score:", error));
+    } else {
+        console.log("No high score data found.");
+    }
+  })
+  .catch(error => console.error("Error fetching highest score:", error));
 
    }, 55000);
 
@@ -702,5 +713,6 @@ function enableTrigger() {
    yellow);
 
  }
+ submitShot.play();
 }
 submit.onclick = enableTrigger;
