@@ -14,12 +14,6 @@ let submit = document.getElementById(
 let red;
 
 setTimeout(()=>{
-  gunLoad.play();
-}, 1000);
-setTimeout(()=>{
-  gunCock.play();
-}, 1500);
-setTimeout(()=>{
   pageLoadShots.play();
 }, 3000);
 
@@ -215,6 +209,7 @@ function enableTrigger() {
    setTimeout(() => {
     timer.innerHTML =
      "00:42 seconds...";
+     lightMachineGun.play();
    }, 3000);
    setTimeout(() => {
     timer.innerHTML =
@@ -307,6 +302,7 @@ function enableTrigger() {
    setTimeout(() => {
     timer.innerHTML =
      "00:20 seconds...";
+     highscoreBreak.play();
    }, 25000);
    setTimeout(() => {
     timer.innerHTML =
@@ -342,11 +338,12 @@ function enableTrigger() {
    }, 33000);
    setTimeout(() => {
     timer.innerHTML =
-     "00:11 seconds...";
+     "Missile incoming!!";
    }, 34000);
    setTimeout(() => {
     timer.innerHTML =
-     "00:10 seconds...";
+     "Missile incoming!!";
+     missile.play();
    }, 35000);
    setTimeout(() => {
     timer.innerHTML =
@@ -589,10 +586,13 @@ function enableTrigger() {
      }, 5000);
     } else if (scoreCount >= worldHighScore){
 
+      highscoreBreak.play();
+
      setTimeout(() => {
       highScoreDisplay
        .innerHTML =
        "Uploading new world highscore...";
+       highscoreBreak.play();
      }, 1000);
 
      setTimeout(() => {
@@ -648,6 +648,7 @@ function enableTrigger() {
       }, 3000);
       setTimeout(()=>{
           worldHighScoreDisplay.textContent = `World Highscore retrieved!`;
+          missile.play();
       }, 5000);
       setTimeout(()=>{
           worldHighScoreDisplay.textContent = `World Highscore: ${data.playerName} - ₦${data.score}`;

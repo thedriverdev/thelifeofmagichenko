@@ -6,13 +6,12 @@ const pageLoadShots = document.querySelector(".pageloadshots");
 const submitShot = document.querySelector(".submitshot");
 const gunJammed = document.querySelector(".empty-gun-shot");
 const nvgSwitch = document.querySelector(".nvgswitch");
+const highscoreBreak = document.querySelector(".highscorebreak");
+const localScoreDelete = document.querySelector(".localscoredelete");
+const missile = document.querySelector(".missile");
 
 
-display1 = document.getElementById(
-  "display1");
- let display2 = document.getElementById(
-  "display2");
- let display3 = document.getElementById(
-  "display3");
- let display4 = document.getElementById(
-  "display4");
+display1 = document.getElementById("display1");
+ let display2 = document.getElementById("display2");
+ let display3 = document.getElementById("display3");
+ let display4 = document.getElementById("display4");

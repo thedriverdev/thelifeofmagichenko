@@ -18,6 +18,7 @@ worldHighScoreDisplay.innerHTML =
 let highScoreDisplay = document
  .getElementById("hiSco");
 
+// Code to clear Local HighScore
 function clearHighScore() {
 
  setTimeout(() => {
@@ -43,6 +44,7 @@ function clearHighScore() {
    "Highscore cleared!";
   trigger.innerHTML =
    "Highscore cleared!";
+   localScoreDelete.play();
   localStorage.clear();
  }, 3000);
  setTimeout(() => {

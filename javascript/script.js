@@ -32,21 +32,22 @@ momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute}`;
  const desktopMessage =
   `${day}-${month}-${year} | ${hour}:${minute} <br><br><br><br><br><br> THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE`;
  
- function isMobile() {
-  return /Mobi|Android/i.test(navigator
-   .userAgent);
- }
+//  function isMobile() {
+//   return /Mobi|Android/i.test(navigator
+//    .userAgent);
+//  }
  
- if (!isMobile()) {
-  parent.innerHTML =
-   desktopMessage;
-  parent.style.textAlign = "center";
-  parent.style.marginTop = "50px";
-  parent.style.fontSize = "30px";
-  parent.style.fontWeight = "bold";
- }
+//  if (!isMobile()) {
+//   parent.innerHTML =
+//    desktopMessage;
+//   parent.style.textAlign = "center";
+//   parent.style.marginTop = "50px";
+//   parent.style.fontSize = "30px";
+//   parent.style.fontWeight = "bold";
+//  }
 
  function shoot() {
+  gunShot.play();
   bulletCount++;
   bulletCountDisplay.innerHTML =
    "Bullets count: " + bulletCount;
@@ -62,7 +63,6 @@ momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute}`;
  }
  trigger.addEventListener("click", shoot);
  
- let billBoard = document.getElementById(
-  "billBoard");
+ let billBoard = document.getElementById("billBoard");
  billBoard.style.display = "none";
  

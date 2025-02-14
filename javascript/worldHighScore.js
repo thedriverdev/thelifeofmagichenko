@@ -10,12 +10,6 @@ worldHighScoreHeading.style.marginTop = "120px";
 worldHighScoreHeading.style.fontSize = "25px";
 worldHighScoreHeading.style.fontWeight = "bold";
 
-// worldHighScoreList.innerHTML = `EXIT BEFORE STEPPENWOLF APPEARS<br>`;
-// worldHighScoreList.style.textAlign = "center";
-// worldHighScoreList.style.marginTop = "50px";
-// worldHighScoreList.style.fontSize = "15px";
-// worldHighScoreList.style.fontWeight = "bold";
-
 steppenwolf.style.textAlign = "center";
 steppenwolf.style.marginTop = "5px";
 steppenwolf.style.fontSize = "15px";
@@ -68,7 +62,7 @@ setTimeout(() => {
  setTimeout(() => {
   steppenwolfVoice.play();
   steppenwolf.innerHTML =
-   `<img src="steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
+   `<img src="/photos/steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
     <p>I HAVE COME TO ENLIGHTEN YOU TO THE GREAT DARKNESS<br>I WILL BATHE IN YOUR FEAR</p>
    `;
  }, 11000);
