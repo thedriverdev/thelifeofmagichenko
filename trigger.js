@@ -129,7 +129,7 @@ function enableTrigger() {
 
         // Upload local highscore if higher than world highscore
         setTimeout(()=> {
-          if (highScore >= worldHighScore) {
+          if (highScore > worldHighScore) {
 
             setTimeout(() => {
               highScoreDisplay.innerHTML = "Uploading new world highscore...";
@@ -152,14 +152,14 @@ function enableTrigger() {
         
             }, 1000);
               
-              setTimeout(() => {
-                highScoreDisplay.innerHTML = "New world highscore uploaded!";
-              
-              }, 3000);
-              
-              setTimeout(() => {
-                highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
-              }, 5000);
+            setTimeout(() => {
+              highScoreDisplay.innerHTML = "New world highscore uploaded!";
+            
+            }, 3000);
+            
+            setTimeout(() => {
+              highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
+            }, 5000);
 
               // Receive World Highscore from server after game area loads
               setTimeout(() => { 
