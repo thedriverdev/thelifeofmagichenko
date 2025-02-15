@@ -151,59 +151,59 @@ function enableTrigger() {
                 .catch(error => console.error(error));
         
             }, 1000);
-            
-            setTimeout(() => {
-              highScoreDisplay.innerHTML = "New world highscore uploaded!";
-            
-            }, 3000);
-            
-            setTimeout(() => {
-              highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
-            }, 5000);
+              
+              setTimeout(() => {
+                highScoreDisplay.innerHTML = "New world highscore uploaded!";
+              
+              }, 3000);
+              
+              setTimeout(() => {
+                highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
+              }, 5000);
+
+              // Receive World Highscore from server after game area loads
+              setTimeout(() => { 
+                fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
+                  method: "GET",
+                  headers: {
+                      "Content-Type": "application/json"
+                  }
+                })
+                .then(response => response.json())
+                .then(data => {
+                  if (data) {
+                    console.log(`Player: ${data.playerName}, Score: ${data.score}`);
+                    
+
+                    worldHighScore = `${data.score}`;
+                    worldHighScorer = `${data.playerName}`;
+
+                    setTimeout(()=>{
+                        worldHighScoreDisplay.innerHTML = `Retrieving World Highscore...`;
+                    }, 1000);
+                    setTimeout(()=>{
+                        worldHighScoreDisplay.innerHTML = `World Highscore retrieved!`;
+                    }, 3000);
+                    setTimeout(()=>{
+                        worldHighScoreDisplay.innerHTML = `World Highscore: ${data.playerName} - ₦${data.score}`;
+                    }, 5000);
+
+
+                  } else {
+                    console.log("No high score data found.");
+                  }
+                })
+                .catch(error => console.error("Error fetching highest score:", error));
+              }, 6000);
+
           }
         }, 5000);
 
-
       } else {
           console.log("No high score data found.");
       }
     })
     .catch(error => console.error("Error fetching highest score:", error));
-
-  // Receive World Highscore from server after game area loads
-  setTimeout(() => { 
-    fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
-      method: "GET",
-      headers: {
-          "Content-Type": "application/json"
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data) {
-          console.log(`Player: ${data.playerName}, Score: ${data.score}`);
-          
-
-          worldHighScore = `${data.score}`;
-          worldHighScorer = `${data.playerName}`;
-
-          setTimeout(()=>{
-              worldHighScoreDisplay.innerHTML = `Retrieving World Highscore...`;
-          }, 1000);
-          setTimeout(()=>{
-              worldHighScoreDisplay.innerHTML = `World Highscore retrieved!`;
-          }, 3000);
-          setTimeout(()=>{
-              worldHighScoreDisplay.innerHTML = `World Highscore: ${data.playerName} - ₦${data.score}`;
-          }, 5000);
-
-
-      } else {
-          console.log("No high score data found.");
-      }
-    })
-    .catch(error => console.error("Error fetching highest score:", error));
-  }, 10000);
 
   expressions.innerText = input.value +
    ": Alrighty, boss!";
