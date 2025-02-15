@@ -13,7 +13,7 @@ function shooting() {
   firingRateDisplay.innerHTML = "Firing rate: " + firingRate;
   firing.innerHTML = "Firing:" + ("🔥".repeat(firingRate));
   clearInterval(interval);
-  interval = setInterval(decrement, 120);
+  interval = setInterval(decrement, 150);
  } else if (firingRate >= 19 && firingRate <= 21) {
   firingRate++;
   firingRateDisplay.style.color = "orange";
