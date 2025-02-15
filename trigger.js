@@ -150,16 +150,16 @@ function enableTrigger() {
                 .then(data => console.log(data.PlayerName))
                 .catch(error => console.error(error));
         
-            }, 6000);
+            }, 1000);
             
             setTimeout(() => {
               highScoreDisplay.innerHTML = "New world highscore uploaded!";
             
-            }, 7000);
+            }, 3000);
             
             setTimeout(() => {
               highScoreDisplay.innerHTML = "Highscore: " + input.value + " - ₦" + highScore;
-            }, 8000);
+            }, 5000);
           }
         }, 5000);
 
