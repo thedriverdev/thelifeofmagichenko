@@ -129,7 +129,7 @@ function enableTrigger() {
 
         // Upload local highscore if higher than world highscore
         setTimeout(()=> {
-          if (highScore > worldHighScore) {
+          if (highScore >= worldHighScore && highScorer !== worldHighScorer) {
 
             setTimeout(() => {
               highScoreDisplay.innerHTML = "Uploading new world highscore...";
