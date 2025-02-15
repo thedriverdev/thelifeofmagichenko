@@ -29,8 +29,7 @@ momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute}`;
   `${day}-${month}-${year} | ${hour}:${minute} <br><br><br><br><br><br> THIS GAME IS PLAYABLE ONLY ON MOBILE DEVICES<br><br>PLEASE LOG ON USING YOUR SMARTPHONE OR TABLET<br><br>SMARTPHONES ARE RECOMMENDED FOR A BETTER GAMING EXPERIENCE`;
  
  function isMobile() {
-  return /Mobi|Android/i.test(navigator
-   .userAgent);
+  return /Mobi|Android/i.test(navigator.userAgent);
  }
  
  if (!isMobile()) {
