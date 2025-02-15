@@ -5,14 +5,10 @@ let parent = document.getElementById(
   "game");
  gameArea.style.display = "none";
  
- let bulletCountDisplay = document
-  .getElementById("bulletCountDisplay");
- let firing = document.getElementById(
-  "firing");
- let expressions = document
-  .getElementById("magichenko");
- let trigger = document.getElementById(
-  "trigger");
+ let bulletCountDisplay = document.getElementById("bulletCountDisplay");
+ let firing = document.getElementById("firing");
+ let expressions = document.getElementById("magichenko");
+ let trigger = document.getElementById("trigger");
  
  let bulletCount = 0;
  let firingRate = 0;
@@ -49,14 +45,10 @@ momentBillboard.innerHTML = `${day}-${month}-${year} | ${hour}:${minute}`;
  function shoot() {
   gunShot.play();
   bulletCount++;
-  bulletCountDisplay.innerHTML =
-   "Bullets count: " + bulletCount;
+  bulletCountDisplay.innerHTML = "Bullets count: " + bulletCount;
   if (firingRate > 21) {
-   bulletCountDisplay.innerHTML =
-    "Bullets count: " + bulletCount +
-    " Gun overheating!";
-   bulletCountDisplay.style.color =
-    "red";
+   bulletCountDisplay.innerHTML = "Bullets count: " + bulletCount + " Gun overheating!";
+   bulletCountDisplay.style.color = "red";
     
   }
   trigger.innerText = "Firing🥵";

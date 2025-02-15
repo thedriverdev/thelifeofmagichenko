@@ -498,8 +498,6 @@ function enableTrigger() {
     parent.style.color = "grey";
     highScoreDisplay.style.color = "grey";
     highScoreDisplay.style.borderBottom = "1px dashed red";
-    //highScoreDisplay.style.borderWidth = "1px";
-    //highScoreDisplay.style.borderColor = "red";
    }, 45000);
 
    setTimeout(() => {

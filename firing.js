@@ -14,7 +14,7 @@ function shooting() {
   firing.innerHTML = "Firing:" + ("🔥".repeat(firingRate));
   clearInterval(interval);
   interval = setInterval(decrement, 85);
- } else if (firingRate >= 19 && firingRate <= 21) {
+ } else if (firingRate > 19 && firingRate <= 21) {
   firingRate++;
   firingRateDisplay.style.color = "orange";
   firingRateDisplay.innerHTML = "Firing rate: " + firingRate + " Warning of overheating";
@@ -26,7 +26,7 @@ function shooting() {
   firing.innerHTML = "Firing: Gun overheating!";
   firingRateDisplay.innerHTML = "Firing rate: Gun overheating!";
   clearInterval(interval);
-  interval = setInterval(decrement, 66);
+  interval = setInterval(decrement, 60);
  }
 }
 
