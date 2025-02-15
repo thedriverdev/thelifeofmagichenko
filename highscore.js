@@ -12,6 +12,8 @@ let worldHighScoreDisplay = document
 let worldHighScore = 0;
 let worldHighScorer;
 
+
+
 worldHighScoreDisplay.innerHTML =
  "World Highscore: Connect to server to sync score.";
 
@@ -45,8 +47,7 @@ function clearHighScore() {
  }, 5000);
 
 }
-highScoreDisplay.onclick =
- clearHighScore;
+highScoreDisplay.onclick = clearHighScore;
 
 let scoreCountDisplay = document.getElementById("scoreCountDisplay");
 
