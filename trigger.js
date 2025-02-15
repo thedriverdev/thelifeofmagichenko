@@ -142,7 +142,7 @@ function enableTrigger() {
                   "X-API-KEY": xydfg
                 },
                 body: JSON.stringify({
-                  PlayerName: input.value,
+                  PlayerName: highScorer,
                   Score: highScore
                 })
                 })
@@ -158,7 +158,7 @@ function enableTrigger() {
             }, 3000);
             
             setTimeout(() => {
-              highScoreDisplay.innerHTML = "Highscore: " + input.value + " - ₦" + highScore;
+              highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
             }, 5000);
           }
         }, 5000);
