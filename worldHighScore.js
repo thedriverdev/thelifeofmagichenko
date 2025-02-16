@@ -62,7 +62,7 @@ setTimeout(() => {
  setTimeout(() => {
   steppenwolfVoice.play();
   steppenwolf.innerHTML =
-   `<img src="/photos/steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
+   `<img src="steppenwolf.jpg" alt="Photo of Steppenwolf"><br>
     <p>I HAVE COME TO ENLIGHTEN YOU TO THE GREAT DARKNESS<br>I WILL BATHE IN YOUR FEAR</p>
    `;
  }, 11000);
