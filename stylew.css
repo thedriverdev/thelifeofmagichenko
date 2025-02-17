@@ -11,6 +11,13 @@
     font-size: 14px;
     font-weight: bold;
   }
+
+  #wHiScoFooter {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 10px;
+    font-weight: bold;
+  }
 }
 
 .steppenwolf {
@@ -22,5 +29,12 @@
   text-align: center;
   margin-top: 50px;
   font-size: 25px;
+  font-weight: bold;
+}
+
+#wHiScoFooter {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 15px;
   font-weight: bold;
 }

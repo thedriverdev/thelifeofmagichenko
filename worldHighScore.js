@@ -1,10 +1,11 @@
 const worldHighScoreHeading = document.getElementById("wHiScoHeading");
+const worldHighScoreSubHeading = document.getElementById("wHiScoFooter");
 const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
 
-worldHighScoreHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
+worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
 
 steppenwolf.style.textAlign = "center";
 steppenwolf.style.marginTop = "5px";
@@ -77,7 +78,12 @@ setTimeout(() => {
     })
     .then(response => response.json())
     .then(data => {
-      steppenwolf.innerHTML = "";
+      if (data.length > 1) {
+        worldHighScoreHeading.innerHTML = `TOP ${data.length} HIGH SCORES OF ALL TIME!`;
+      } else {
+        worldHighScoreHeading.innerHTML = `TOP HIGH SCORE OF ALL TIME!`;
+      }
+      //steppenwolf.innerHTML = "";
       if (Array.isArray(data) && data.length > 0) {
         console.log(`Player: ${data.playerName}, Score: ${data.score}`);
 
