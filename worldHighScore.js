@@ -78,17 +78,27 @@ setTimeout(() => {
     })
     .then(response => response.json())
     .then(data => {
-      if (data.length > 1) {
-        worldHighScoreHeading.innerHTML = `TOP ${data.length} HIGH SCORES OF ALL TIME!`;
+      if (data.length > 2) {
+        worldHighScoreHeading.innerHTML = `TOP ${(data.length) - 1} HIGH SCORES OF ALL TIME!`;
       } else {
         worldHighScoreHeading.innerHTML = `TOP HIGH SCORE OF ALL TIME!`;
       }
       //steppenwolf.innerHTML = "";
       if (Array.isArray(data) && data.length > 0) {
-        console.log(`Player: ${data.playerName}, Score: ${data.score}`);
 
         data.forEach((dat, index) => {
           let row = document.createElement("tr");
+          if (index === 0) {
+            row.style.color = "#705C00";
+          } else if (index === 1) {
+            row.style.color = "#4A4A4A";
+          } else if (index === 2) {
+            row.style.color = "#3E2D1E";
+          } else if (index > 2 && index < (data.length - 2)) {
+            row.style.color = "black";
+          }  else if (dat.score === 0 && dat.playerName === "The Man") {
+            row.style.color = "whitesmoke";
+          }
           row.innerHTML = `<td>${index + 1}</td>
           <td>${dat.playerName}</td>
           <td>${dat.score}</td>

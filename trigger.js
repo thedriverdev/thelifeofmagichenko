@@ -587,12 +587,11 @@ function enableTrigger() {
 
     // Score upload
 
-    if (scoreCount < (75 / 100 *
-      worldHighScore)) {
+    if (scoreCount < 1) {
      setTimeout(() => {
       highScoreDisplay
        .innerHTML =
-       "Score below 75%.";
+       "Score below ₦1.";
      }, 1000);
      setTimeout(() => {
       highScoreDisplay
@@ -616,10 +615,7 @@ function enableTrigger() {
       
      }, 5000);
 
-    } else if (scoreCount >= (75 / 100 *
-      worldHighScore) && scoreCount <=
-     worldHighScore) {
-
+    } else if (scoreCount >= 1) {
      setTimeout(() => {
       highScoreDisplay
        .innerHTML =

@@ -1,5 +1,9 @@
 @media only screen and (max-width: 767px) {
 
+  body {
+    background-color: whitesmoke;
+  }
+
   .steppenwolf {
     text-align: center;
     margin: auto;
@@ -7,7 +11,7 @@
 
   #wHiScoHeading {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
   }
@@ -15,7 +19,7 @@
   #wHiScoFooter {
     text-align: center;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bold;
   }
 }
