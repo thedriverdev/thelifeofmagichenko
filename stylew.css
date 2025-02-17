@@ -1,0 +1,12 @@
+@media only screen and (max-width: 767px) {
+
+  .steppenwolf {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.steppenwolf {
+  text-align: center;
+  margin: auto;
+}

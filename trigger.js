@@ -105,7 +105,7 @@ function enableTrigger() {
   fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore", {
     method: "GET",
     headers: {
-        "Content-Type": "application/json"
+      "Content-Type": "application/json"
     }
   })
   .then(response => response.json())
@@ -129,7 +129,7 @@ function enableTrigger() {
 
         // Upload local highscore if higher than world highscore
         setTimeout(()=> {
-          if (highScore >= worldHighScore && highScorer !== worldHighScorer) {
+          if (highScore >= data.score && highScorer !== data.playerName) {
 
             setTimeout(() => {
               highScoreDisplay.innerHTML = "Uploading new world highscore...";
@@ -145,10 +145,10 @@ function enableTrigger() {
                   PlayerName: highScorer,
                   Score: highScore
                 })
-                })
-                .then(response => response.json())
-                .then(data => console.log(data.PlayerName))
-                .catch(error => console.error(error));
+              })
+              .then(response => response.json())
+              .then(data => console.log(data.PlayerName))
+              .catch(error => console.error(error));
         
             }, 1000);
               
@@ -196,6 +196,16 @@ function enableTrigger() {
                 .catch(error => console.error("Error fetching highest score:", error));
               }, 6000);
 
+          }
+          else {
+            setTimeout(() => {
+              highScoreDisplay.innerHTML = "Score did not upload!";
+            
+            }, 2000);
+            
+            setTimeout(() => {
+              highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
+            }, 4000);
           }
         }, 5000);
 

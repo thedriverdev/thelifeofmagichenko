@@ -1,10 +1,10 @@
 const worldHighScoreHeading = document.getElementById("wHiScoHeading");
 const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
-const steppenwolf = document.querySelector(".steppenwolf");
+const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
 
-worldHighScoreHeading.innerHTML = "PAGE IS UNDER DEVELOPMENT";
+worldHighScoreHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
 worldHighScoreHeading.style.textAlign = "center";
 worldHighScoreHeading.style.marginTop = "120px";
 worldHighScoreHeading.style.fontSize = "25px";
@@ -15,6 +15,7 @@ steppenwolf.style.marginTop = "5px";
 steppenwolf.style.fontSize = "15px";
 steppenwolf.style.fontWeight = "bold";
 
+/*
 setTimeout(() => {
   steppenwolf.innerHTML =
    "EXIT BEFORE STEPPENWOLF APPEARS";
@@ -66,3 +67,36 @@ setTimeout(() => {
     <p>I HAVE COME TO ENLIGHTEN YOU TO THE GREAT DARKNESS<br>I WILL BATHE IN YOUR FEAR</p>
    `;
  }, 11000);
+
+ */
+
+
+  // Receive Top 1000 World Highscores from server
+/*
+    fetch("https://https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore/Top1000", {
+      method: "GET",
+      headers: {
+          "Content-Type": "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      steppenwolf.innerHTML = "";
+      if (Array.isArray(data) && data.length > 0) {
+        console.log(`Player: ${data.playerName}, Score: ${data.score}`);
+
+        data.forEach((dat, index) => {
+          let row = document.createElement("tr");
+          row.innerHTML = `<td>${index + 1}</td>
+          <td>${dat.playerName}</td>
+          <td>${dat.score}</td>
+          `
+          steppenwolf.appendChild(row);
+        });
+  
+      } else {
+        steppenwolf.innerHTML = "No high score data found.";
+      }
+    })
+    .catch(error => console.error("Error fetching highest score:", error));
+*/
