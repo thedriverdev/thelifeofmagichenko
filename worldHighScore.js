@@ -4,7 +4,7 @@ const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
-
+worldHighScoreHeading.innerHTML = "CONNECT TO INTERNET TO VIEW TOP SCORES";
 worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
 
 steppenwolf.style.textAlign = "center";
