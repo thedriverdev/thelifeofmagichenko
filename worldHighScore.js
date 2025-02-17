@@ -5,10 +5,6 @@ const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
 
 worldHighScoreHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
-worldHighScoreHeading.style.textAlign = "center";
-worldHighScoreHeading.style.marginTop = "120px";
-worldHighScoreHeading.style.fontSize = "25px";
-worldHighScoreHeading.style.fontWeight = "bold";
 
 steppenwolf.style.textAlign = "center";
 steppenwolf.style.marginTop = "5px";
@@ -72,8 +68,8 @@ setTimeout(() => {
 
 
   // Receive Top 1000 World Highscores from server
-/*
-    fetch("https://https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore/Top1000", {
+
+    fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore/Top1000", {
       method: "GET",
       headers: {
           "Content-Type": "application/json"
@@ -99,4 +95,3 @@ setTimeout(() => {
       }
     })
     .catch(error => console.error("Error fetching highest score:", error));
-*/

@@ -4,9 +4,23 @@
     text-align: center;
     margin: auto;
   }
+
+  #wHiScoHeading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
 }
 
 .steppenwolf {
   text-align: center;
   margin: auto;
+}
+
+#wHiScoHeading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
 }
