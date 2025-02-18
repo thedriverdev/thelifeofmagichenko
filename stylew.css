@@ -24,6 +24,10 @@
   }
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 .steppenwolf {
   text-align: center;
   margin: auto;

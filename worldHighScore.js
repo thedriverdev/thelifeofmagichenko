@@ -79,8 +79,10 @@ setTimeout(() => {
     .then(response => response.json())
     .then(data => {
       if (data.length > 2) {
-        worldHighScoreHeading.innerHTML = `TOP ${(data.length) - 1} HIGH SCORES OF ALL TIME!`;
-      } else {
+        worldHighScoreHeading.innerHTML = `TOP ${(data.length) - 1} WORLD HIGH SCORES OF ALL TIME!`;
+      } else if (data.length < 2) {
+        worldHighScoreHeading.innerHTML = `NO SCORES. PLAY GAME TO SEE YOUR SCORE(S)`;
+      }else {
         worldHighScoreHeading.innerHTML = `TOP HIGH SCORE OF ALL TIME!`;
       }
       //steppenwolf.innerHTML = "";
@@ -88,7 +90,16 @@ setTimeout(() => {
 
         data.forEach((dat, index) => {
           let row = document.createElement("tr");
-          if (index === 0) {
+
+          if (dat.score === 0 && dat.playerName === "The Man") {
+            row.style.color = "whitesmoke";
+          } else if (dat.score === 0 && dat.playerName === "The Man" && index === 0) {
+            row.style.color = "whitesmoke";
+          } else if (dat.score === 0 && dat.playerName === "The Man" && index === 1) {
+            row.style.color = "whitesmoke";
+          } else if (dat.score === 0 && dat.playerName === "The Man" && index == 2) {
+            row.style.color = "whitesmoke";
+          } else if (index === 0) {
             row.style.color = "#705C00";
           } else if (index === 1) {
             row.style.color = "#4A4A4A";
@@ -96,9 +107,8 @@ setTimeout(() => {
             row.style.color = "#3E2D1E";
           } else if (index > 2 && index < (data.length - 2)) {
             row.style.color = "black";
-          }  else if (dat.score === 0 && dat.playerName === "The Man") {
-            row.style.color = "whitesmoke";
           }
+
           row.innerHTML = `<td>${index + 1}</td>
           <td>${dat.playerName}</td>
           <td>${dat.score}</td>
