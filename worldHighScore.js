@@ -4,11 +4,8 @@ const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
-worldHighScoreHeading.innerHTML = "CONNECT TO INTERNET TO VIEW TOP SCORES";
+worldHighScoreHeading.innerHTML = "CONNECT TO THE INTERNET TO VIEW TOP SCORES";
 worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
-
-worldHighScoreHeading.style.marginTop = "50px";
-worldHighScoreHeading.style.fontSize = "14px";
 
 steppenwolf.style.textAlign = "center";
 steppenwolf.style.margin = "auto";
