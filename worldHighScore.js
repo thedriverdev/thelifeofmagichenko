@@ -79,7 +79,7 @@ setTimeout(() => {
     .then(response => response.json())
     .then(data => {
       if (data.length > 2) {
-        worldHighScoreHeading.innerHTML = `TOP ${(data.length) - 1} WORLD HIGH SCORES OF ALL TIME!`;
+        worldHighScoreHeading.innerHTML = `THE LIFE OF OGO MAGICHENKO<br>The Arcade High Scores Table!`;
       } else if (data.length < 2) {
         worldHighScoreHeading.innerHTML = `NO SCORES. PLAY GAME TO SEE YOUR SCORE(S)`;
       }else {
