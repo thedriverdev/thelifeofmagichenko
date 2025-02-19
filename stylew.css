@@ -12,7 +12,7 @@
   #wHiScoHeading {
     text-align: center;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
   }
 
@@ -24,9 +24,9 @@
   }
 }
 
-  body {
-    background-color: whitesmoke;
-  }
+body {
+  background-color: whitesmoke;
+}
 
 .steppenwolf {
   text-align: center;

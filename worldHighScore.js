@@ -7,6 +7,9 @@ const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
 worldHighScoreHeading.innerHTML = "CONNECT TO INTERNET TO VIEW TOP SCORES";
 worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
 
+worldHighScoreHeading.style.marginTop = "50px";
+worldHighScoreHeading.style.fontSize = "14px";
+
 steppenwolf.style.textAlign = "center";
 steppenwolf.style.margin = "auto";
 steppenwolf.style.fontSize = "12px";
