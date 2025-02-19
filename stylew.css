@@ -4,10 +4,15 @@
     background-color: whitesmoke;
   }
 
+  .steppenwolf {
+    text-align: center;
+    margin: auto;
+  }
+
   #wHiScoHeading {
     text-align: center;
-    margin-top: 5px;
-    font-size: 12px;
+    margin-top: 10px;
+    font-size: 14px;
     font-weight: bold;
   }
 
@@ -19,9 +24,9 @@
   }
 }
 
-body {
-  background-color: whitesmoke;
-}
+  body {
+    background-color: whitesmoke;
+  }
 
 .steppenwolf {
   text-align: center;

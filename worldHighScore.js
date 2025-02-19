@@ -90,7 +90,6 @@ setTimeout(() => {
 
         data.forEach((dat, index) => {
           let row = document.createElement("tr");
-          row.style.fontSize = "12px";
 
           if (dat.score === 0 && dat.playerName === "The Man") {
             row.style.color = "whitesmoke";
