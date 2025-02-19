@@ -8,8 +8,8 @@ worldHighScoreHeading.innerHTML = "CONNECT TO INTERNET TO VIEW TOP SCORES";
 worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
 
 steppenwolf.style.textAlign = "center";
-steppenwolf.style.marginTop = "5px";
-steppenwolf.style.fontSize = "15px";
+steppenwolf.style.margin = "auto";
+steppenwolf.style.fontSize = "12px";
 steppenwolf.style.fontWeight = "bold";
 
 /*
@@ -90,6 +90,7 @@ setTimeout(() => {
 
         data.forEach((dat, index) => {
           let row = document.createElement("tr");
+          row.style.fontSize = "12px";
 
           if (dat.score === 0 && dat.playerName === "The Man") {
             row.style.color = "whitesmoke";
