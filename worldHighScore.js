@@ -6,6 +6,8 @@ const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
 worldHighScoreHeading.innerHTML = "CONNECT TO THE INTERNET TO VIEW TOP SCORES";
 worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
+const searchBar = document.querySelector(".searchbar");
+const searchButton = document.querySelector(".searchbutton");
 
 steppenwolf.style.textAlign = "center";
 steppenwolf.style.margin = "auto";
@@ -73,7 +75,7 @@ setTimeout(() => {
     fetch("https://oneidledev-001-site1.otempurl.com/api/TLOMHighScore/Top1000", {
       method: "GET",
       headers: {
-          "Content-Type": "application/json"
+        "Content-Type": "application/json"
       }
     })
     .then(response => response.json())
@@ -85,7 +87,7 @@ setTimeout(() => {
       }else {
         worldHighScoreHeading.innerHTML = `TOP HIGH SCORE OF ALL TIME!`;
       }
-      //steppenwolf.innerHTML = "";
+
       if (Array.isArray(data) && data.length > 0) {
 
         data.forEach((dat, index) => {
@@ -114,10 +116,26 @@ setTimeout(() => {
           <td>${dat.score}</td>
           `
           steppenwolf.appendChild(row);
+
+          function getPlayerStats() {
+
+            data.forEach((d, i) => {
+              if (searchBar.value === d.playerName) {
+
+                steppenwolf.innerHTML = `<td>${i + 1}</td>
+                <td>${d.playerName}</td>
+                <td>${d.score}</td>
+                `
+              }
+            })
+        
+          }
+          searchButton.addEventListener("click", getPlayerStats);
         });
   
       } else {
         steppenwolf.innerHTML = "No high score data found.";
       }
+
     })
-    .catch(error => console.error("Error fetching highest score:", error));
+    .catch(error => console.error("Error fetching scores:", error));
