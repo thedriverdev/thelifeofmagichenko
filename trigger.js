@@ -22,19 +22,15 @@ function enableTrigger() {
  if (input.value.trim() === "") {
 
   input.value = "Magichenko";
-  submit.innerText =
-   "Play as Magichenko?";
+  submit.innerText = "Play as Magichenko?";
 
  } else {
 
-  input.value = input.value
-   .trim();
+  input.value = input.value.trim();
 
-  shooterNomDisplay.innerHTML =
-   "Shooter: " + input.value;
+  shooterNomDisplay.innerHTML = "Shooter: " + input.value;
 
-  let paragraph1 =
-   "GAME ON!";
+  let paragraph1 = "GAME ON!";
 
   let letters1 = paragraph1.split('');
 

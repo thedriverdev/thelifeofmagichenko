@@ -26,7 +26,7 @@ function shooting() {
   firing.innerHTML = "Firing: Gun overheating!";
   firingRateDisplay.innerHTML = "Firing rate: Gun overheating!";
   clearInterval(interval);
-  interval = setInterval(decrement, 20);
+  interval = setInterval(decrement, 18);
  }
 }
 

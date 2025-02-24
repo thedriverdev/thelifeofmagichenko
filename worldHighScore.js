@@ -4,7 +4,7 @@ const xydfg = "Zzdf1zxkj=-Zsdfzsxz$-Zxdfzxkj%-Azdfxszx$&";
 const worldHighScoreList = document.querySelector(".wHiScoList");
 const steppenwolf = document.querySelector(".steppenwolf tbody");
 const steppenwolfVoice = document.querySelector(".steppenwolfvoice");
-worldHighScoreHeading.innerHTML = "CONNECT TO THE INTERNET TO VIEW TOP SCORES";
+worldHighScoreHeading.innerHTML = "CONNECT TO THE INTERNET TO VIEW SCORES";
 worldHighScoreSubHeading.innerHTML = "EXPECT UPDATES FOR BETTER VIEWING EXPERIENCE!";
 const searchBar = document.querySelector(".searchbar");
 const searchButton = document.querySelector(".searchbutton");
@@ -81,7 +81,7 @@ setTimeout(() => {
     .then(response => response.json())
     .then(data => {
       if (data.length > 2) {
-        worldHighScoreHeading.innerHTML = `THE LIFE OF OGO MAGICHENKO<br>The Arcade High Scores Table!`;
+        worldHighScoreHeading.innerHTML = `THE LIFE OF OGO MAGICHENKO<br>The Arcade High Scores Table of ${data.length - 1} Scores`;
       } else if (data.length < 2) {
         worldHighScoreHeading.innerHTML = `NO SCORES. PLAY GAME TO SEE YOUR SCORE(S)`;
       }else {
@@ -131,6 +131,8 @@ setTimeout(() => {
         
           }
           searchButton.addEventListener("click", getPlayerStats);
+
+
         });
   
       } else {
