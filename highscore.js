@@ -23,31 +23,75 @@ let highScoreDisplay = document
 // Code to clear Local HighScore
 function clearHighScore() {
 
- setTimeout(() => {
-  highScoreDisplay.innerHTML = "Clearing highscore in 3.";
-  trigger.innerHTML = "Clearing highscore in 3.";
- }, 0);
- setTimeout(() => {
-  highScoreDisplay.innerHTML = "Clearing highscore in 2.";
-  trigger.innerHTML = "Clearing highscore in 2.";
- }, 1000);
- setTimeout(() => {
-  highScoreDisplay.innerHTML = "Clearing highscore in 1.";
-  trigger.innerHTML = "Clearing highscore in 1.";
- }, 2000);
- setTimeout(() => {
-  highScoreDisplay.innerHTML = "Highscore cleared!";
-  trigger.innerHTML = "Highscore cleared!";
-   localScoreDelete.play();
-  localStorage.clear();
- }, 3000);
- setTimeout(() => {
-  highScoreDisplay.innerHTML = "Refresh page!";
-  trigger.innerHTML = "Refresh page!";
- }, 5000);
+  highScoreDisplay.innerHTML = `Reset local high score: <button class="resetYes"
+  onclick="confirmReset();" style="font-size: 10px;font-family: Times New Roman;font-weight: bold; color: red; padding: 0 0 0 0;">YES</button>
+  <button class="resetNo" onclick="denyReset();" style="font-size: 10px;font-family: Times New Roman;font-weight: bold; color: blue; padding: 0 0 0 0;">NO</button>`;
+
+//  setTimeout(() => {
+//   highScoreDisplay.innerHTML = "Clearing highscore in 3.";
+//   trigger.innerHTML = "Clearing highscore in 3.";
+//  }, 0);
+//  setTimeout(() => {
+//   highScoreDisplay.innerHTML = "Clearing highscore in 2.";
+//   trigger.innerHTML = "Clearing highscore in 2.";
+//  }, 1000);
+//  setTimeout(() => {
+//   highScoreDisplay.innerHTML = "Clearing highscore in 1.";
+//   trigger.innerHTML = "Clearing highscore in 1.";
+//  }, 2000);
+//  setTimeout(() => {
+//   highScoreDisplay.innerHTML = "Highscore cleared!";
+//   trigger.innerHTML = "Highscore cleared!";
+//    localScoreDelete.play();
+//   localStorage.clear();
+//  }, 3000);
+//  setTimeout(() => {
+//   highScoreDisplay.innerHTML = "Refresh page!";
+//   trigger.innerHTML = "Refresh page!";
+//  }, 5000);
 
 }
 highScoreDisplay.onclick = clearHighScore;
+
+// Reset confirmation
+function confirmReset(){
+
+  setTimeout(() => {
+    highScoreDisplay.innerHTML = "Clearing highscore in 3.";
+    trigger.innerHTML = "Clearing highscore in 3.";
+  }, 0);
+  setTimeout(() => {
+    highScoreDisplay.innerHTML = "Clearing highscore in 2.";
+    trigger.innerHTML = "Clearing highscore in 2.";
+  }, 1000);
+  setTimeout(() => {
+    highScoreDisplay.innerHTML = "Clearing highscore in 1.";
+    trigger.innerHTML = "Clearing highscore in 1.";
+  }, 2000);
+  setTimeout(() => {
+    highScoreDisplay.innerHTML = "Highscore cleared!";
+    trigger.innerHTML = "Highscore cleared!";
+    localScoreDelete.play();
+    localStorage.clear();
+    highScore = 0;
+    highScorer = "The Man";
+  }, 3000);
+  setTimeout(() => {
+
+    highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
+    trigger.innerHTML = "Refresh page!";
+  }, 5000);
+}
+function denyReset() {
+  setTimeout(() => {
+    if (scoreCount > highScore) {
+      highScoreDisplay.innerHTML = "New Highscore: " + input.value + " - ₦" + scoreCount;
+    } else {
+      highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
+    }
+    
+  }, 0);
+}
 
 let scoreCountDisplay = document.getElementById("scoreCountDisplay");
 
