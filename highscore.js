@@ -27,29 +27,6 @@ function clearHighScore() {
   onclick="confirmReset();" style="font-size: 10px;font-family: Times New Roman;font-weight: bold; color: red; padding: 0 0 0 0;">YES</button>
   <button class="resetNo" onclick="denyReset();" style="font-size: 10px;font-family: Times New Roman;font-weight: bold; color: blue; padding: 0 0 0 0;">NO</button>`;
 
-//  setTimeout(() => {
-//   highScoreDisplay.innerHTML = "Clearing highscore in 3.";
-//   trigger.innerHTML = "Clearing highscore in 3.";
-//  }, 0);
-//  setTimeout(() => {
-//   highScoreDisplay.innerHTML = "Clearing highscore in 2.";
-//   trigger.innerHTML = "Clearing highscore in 2.";
-//  }, 1000);
-//  setTimeout(() => {
-//   highScoreDisplay.innerHTML = "Clearing highscore in 1.";
-//   trigger.innerHTML = "Clearing highscore in 1.";
-//  }, 2000);
-//  setTimeout(() => {
-//   highScoreDisplay.innerHTML = "Highscore cleared!";
-//   trigger.innerHTML = "Highscore cleared!";
-//    localScoreDelete.play();
-//   localStorage.clear();
-//  }, 3000);
-//  setTimeout(() => {
-//   highScoreDisplay.innerHTML = "Refresh page!";
-//   trigger.innerHTML = "Refresh page!";
-//  }, 5000);
-
 }
 highScoreDisplay.onclick = clearHighScore;
 
@@ -92,6 +69,7 @@ function denyReset() {
     
   }, 0);
 }
+
 
 let scoreCountDisplay = document.getElementById("scoreCountDisplay");
 
