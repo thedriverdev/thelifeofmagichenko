@@ -193,16 +193,7 @@ function enableTrigger() {
               }, 6000);
 
           }
-          else {
-            setTimeout(() => {
-              highScoreDisplay.innerHTML = "Score did not upload!";
-            
-            }, 2000);
-            
-            setTimeout(() => {
-              highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
-            }, 4000);
-          }
+          
         }, 5000);
 
       } else {
@@ -241,12 +232,9 @@ function enableTrigger() {
    highScoreDisplay.classList.toggle("green");
    worldHighScoreDisplay.classList.toggle("black");
    worldHighScoreDisplay.classList.toggle("green");
-   themeSwitch.classList.toggle(
-    "black");
-   billBoard.classList.toggle(
-    "green");
-   if (themeSwitch.innerText ===
-    "NVG: Off") {
+   themeSwitch.classList.toggle("black");
+   billBoard.classList.toggle("green");
+   if (themeSwitch.innerText ==="NVG: Off") {
     themeSwitch.innerText = "NVG: On";
    } else if (themeSwitch
     .innerText ===
@@ -471,7 +459,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Below 75%. Not good enough, Sergeant " +
+       ": Below 75%. Not good enough, " +
        input.value +
        ". Do it again.";
      }, 1000);
@@ -488,7 +476,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Too poor, Corporal " +
+       ": Too poor, " +
        input.value +
        "! Do it again!";
      }, 1000);
@@ -505,7 +493,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Bravo, Captain " + input
+       ": Bravo, " + input
        .value +
        "!";
      }, 1000);
@@ -523,7 +511,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Excellent!! You're amazing, Colonel " +
+       ": Excellent!! You're amazing, " +
        input.value + " 🙌🏾🙌🏾";
      }, 1000);
      setTimeout(() => {
@@ -538,7 +526,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": You are the new lord of war! General " +
+       ": You are the new lord of war! " +
        input.value + " 🫡";
      }, 1000);
      setTimeout(() => {
@@ -553,7 +541,7 @@ function enableTrigger() {
      setTimeout(() => {
       theMan.innerHTML =
        player2 +
-       ": Too poor! You wasted those bullets, Private " +
+       ": Too poor! You wasted those bullets, " +
        input.value + ".";
      }, 1000);
      setTimeout(() => {
@@ -574,7 +562,6 @@ function enableTrigger() {
 
     parent.style.color = "grey";
     highScoreDisplay.style.color = "grey";
-    highScoreDisplay.style.borderBottom = "1px dashed red";
    }, 45000);
 
    setTimeout(() => {

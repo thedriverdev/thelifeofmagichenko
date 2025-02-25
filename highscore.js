@@ -30,10 +30,14 @@ function clearHighScore() {
 }
 highScoreDisplay.onclick = clearHighScore;
 
+const resetYes = document.querySelector(".resetYes");
+const resetNo = document.querySelector(".resetNo");
+
 // Reset confirmation
 function confirmReset(){
 
   setTimeout(() => {
+    trigger.disabled = true;
     highScoreDisplay.innerHTML = "Clearing highscore in 3.";
     trigger.innerHTML = "Clearing highscore in 3.";
   }, 0);
@@ -55,7 +59,7 @@ function confirmReset(){
   }, 3000);
   setTimeout(() => {
 
-    highScoreDisplay.innerHTML = "Highscore: " + highScorer + " - ₦" + highScore;
+    highScoreDisplay.innerHTML = "Refresh page!";
     trigger.innerHTML = "Refresh page!";
   }, 5000);
 }
